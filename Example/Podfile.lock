@@ -1,0 +1,16 @@
+PODS:
+  - ConvenienceKitHaris (0.1.0)
+
+DEPENDENCIES:
+  - ConvenienceKitHaris (from `../`)
+
+EXTERNAL SOURCES:
+  ConvenienceKitHaris:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ConvenienceKitHaris: c2d9f37b086b07ab22e4f9e14f84b58e95041ab2
+
+PODFILE CHECKSUM: 438a7aeea4f622361def515c04f7804df29dc4ff
+
+COCOAPODS: 1.7.5

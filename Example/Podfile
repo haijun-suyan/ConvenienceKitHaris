@@ -1,0 +1,6 @@
+use_frameworks!
+target 'ConvenienceKitHaris_Tests' do
+  pod 'ConvenienceKitHaris', :path => '../'
+  
+  
+end
