@@ -10,10 +10,15 @@
 #define DemoDemo_Prefix_pch
 #import <Availability.h>
 
-
-
 #endif
 
 #ifndef __IPHONE_3_0
 #warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+//引入整个项目公开的声明文件
+#import "UIColor+Additions.h"
+
+
 #endif
