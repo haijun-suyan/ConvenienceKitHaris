@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+//屏幕Width
+#define kScreenWidth [UIScreen mainScreen].bounds.size.width
+//屏幕height
+#define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
 
 @interface HarisUtil : NSObject
