@@ -11,6 +11,7 @@
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 //屏幕height
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
+#define DrawerView_Width kScreenWidth*0.8
 
 
 @interface HarisUtil : NSObject
