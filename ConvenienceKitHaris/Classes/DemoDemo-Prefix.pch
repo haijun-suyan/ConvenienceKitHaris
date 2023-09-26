@@ -17,8 +17,9 @@
 #endif
 
 #ifdef __OBJC__
-//引入整个项目公开的声明文件
-#import "UIColor+Additions.h"
+//引入对整个项目公开的声明文件
+//实现供业务项目层的直接访问
+#import "ConvenienceKitHaris.h"
 
 
 #endif
