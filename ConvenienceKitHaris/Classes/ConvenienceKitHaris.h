@@ -12,6 +12,7 @@
 #import "HarisUtil.h"
 #import "UIView+Responder.h"
 #import "ResponderChainViewController.h"
+#import "ThreadViewController.h"
 #import "NSObject+TimerDown.h"
 #import "NSString+Attributed.h"
 
