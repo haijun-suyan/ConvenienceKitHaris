@@ -13,6 +13,7 @@
 #import "UIView+Responder.h"
 #import "ResponderChainViewController.h"
 #import "ThreadViewController.h"
+#import "RTSenseViewController.h"
 #import "NSObject+TimerDown.h"
 #import "NSString+Attributed.h"
 
