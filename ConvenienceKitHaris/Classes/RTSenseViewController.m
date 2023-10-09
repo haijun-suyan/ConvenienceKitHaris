@@ -16,6 +16,7 @@
 #import "RTSenseViewController.h"
 #import "UIView+Swizzle.h"
 #import "LoseIMP.h"
+#import "NSObject+Associated.h"
 #import <objc/runtime.h>
 
 typedef struct objc_ivar *Ivar;
