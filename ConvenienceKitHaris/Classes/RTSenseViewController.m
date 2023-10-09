@@ -1,35 +1,77 @@
-//
+//  Hook:运行时特性 通过RT框架内的C函数 实施钩挂Hook 促使程序 运行阶段 进入 新IMP执行体流程
 //  RTSenseViewController.m
 //  ConvenienceKitHaris
 //  RunTime框架的API使用场景
 //  Created by haijunyan on 2023/10/7.
+//  CPU读取并处理所勾挂的执行体
 //  应用程序逆向拆解
+//  篡改勾挂映射
+//  地址的事件指针(名) 执行码
+
+//  事件名
+//  SEL事件编号
+//  Method事件指针
+//  IMP(事例)执行体
 
 #import "RTSenseViewController.h"
+#import "UIView+Swizzle.h"
+#import "LoseIMP.h"
 #import <objc/runtime.h>
 
 typedef struct objc_ivar *Ivar;
 typedef struct objc_property *objc_property_t;
 typedef struct objc_method *Method;
 
-
-
 @interface RTSenseViewController ()
 
 @end
 
 @implementation RTSenseViewController
+//方法事件名(形参规则)部分=>执行体部分(IMP)
+//load系统事件
++ (void)load {
+    [super load];
+    NSLog(@"loadload");
+
+    //-[LoseIMP loseIMPMethod]: unrecognized selector sent to instance 0xcc80即@selector(loseIMPMethod)SEL 尚未钩挂 有效的IMP执行体
+    //解决：自定义新SEL事件编号(IMP(事例)执行体),通过RT框架内的替换事件指针函数，促使(异常的)SEL钩挂上自定义新IMP(事例)执行体
+    //  SEL事件编号
+    //  IMP(事例)执行体
+    //***SEL钩挂Hook上IMP执行体***
+    Method customM = class_getInstanceMethod([LoseIMP class], @selector(customLoseIMPMethod));
+    IMP customimp = method_getImplementation(customM);
+    
+    class_replaceMethod([LoseIMP class], @selector(loseIMPMethod), customimp,NULL);
+
+    //  2个SEL(的Method)交换彼此的IMP
+    //  Method事件指针
+    Method origin = class_getInstanceMethod([UIView class], @selector(touchesBegan:withEvent:));
+    Method custom = class_getInstanceMethod([UIView class], @selector(custom_touchesBegan:withEvent:));
+    //映射程序在运行阶段供CPU读取并处理的IMP 可篡改
+    //MethodSwizzling
+    //2个SEL(的Method)交换彼此的IMP
+    method_exchangeImplementations(origin, custom);
+
+    //(钩挂着默认IMP的)SEL(的Method) 钩挂写入 新IMP
+    //@selector(loseIMPMethodSetImp) sel必钩挂 默认IMP 否则函数class_getInstanceMethod失效
+    Method originM = class_getInstanceMethod([LoseIMP class], @selector(loseIMPMethodSetImp));
+    Method customMM = class_getInstanceMethod([UIView class], @selector(customSetImp));
+    IMP customimpM = method_getImplementation(customMM);
+    method_setImplementation(originM, customimpM);
+
+//    IMP customimpMm = class_getMethodImplementation([UIView class], @selector(customSetImp));
+
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self runTimeAnalysis];
-    [self propertyType];
-    [self copyMethodList];
+//    [self runTimeAnalysis];
+//    [self propertyType];
+//    [self copyMethodList];
 
-
-    //可篡改映射程序在运行阶段供CPU读取并处理的事件(MethodSwizzling)
-
-
+    //执行码:(元)地址的事件指针(名)
+    [[LoseIMP alloc] loseIMPMethod];
+    [[LoseIMP alloc] loseIMPMethodSetImp];
 
 
 
