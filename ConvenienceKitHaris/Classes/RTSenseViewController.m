@@ -70,8 +70,8 @@ typedef struct objc_method *Method;
 //    [self copyMethodList];
 
     //执行码:(元)地址的事件指针(名)
-    [[LoseIMP alloc] loseIMPMethod];
-    [[LoseIMP alloc] loseIMPMethodSetImp];
+//    [[LoseIMP alloc] loseIMPMethod];
+//    [[LoseIMP alloc] loseIMPMethodSetImp];
 
 
 
