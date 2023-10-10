@@ -17,6 +17,7 @@
 #import "UIView+Swizzle.h"
 #import "LoseIMP.h"
 #import "NSObject+Associated.h"
+#import "UIView+Associated.h"
 #import <objc/runtime.h>
 
 typedef struct objc_ivar *Ivar;
@@ -73,6 +74,20 @@ typedef struct objc_method *Method;
     //执行码:(元)地址的事件指针(名)
 //    [[LoseIMP alloc] loseIMPMethod];
 //    [[LoseIMP alloc] loseIMPMethodSetImp];
+
+//    UIView *v = [[UIView alloc] init];
+//    v.level = 8;
+//    NSLog(@"level=%ld",(long)v.level);
+//    -[UIView setLevel:]: unrecognized selector sent to instance 0xa940即@selector(setLevel:) SEL缺失IMP执行体
+//    -[UIView level]: unrecognized selector sent to instance 0x0ca0即@selector(level) SEL缺失IMP执行体
+
+    [[NSObject alloc] associatedObjectsMethod];
+
+
+
+
+
+
 
 
 
