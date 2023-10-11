@@ -14,6 +14,7 @@
 #import "NSObject+Associated.h"
 #import "UIView+Associated.h"
 #import "FactoryManager.h"
+#import "AbstractFactoryViewController.h"
 #import "Product.h"
 #import "ResponderChainViewController.h"
 #import "ThreadViewController.h"
