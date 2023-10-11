@@ -22,10 +22,11 @@
     //通熟而言，完整的赋值指令：左侧字段名部分对应预设特征，右侧表达式的实例值本身特征为运行时实际呈现特征(真实的特征)
     //获取工厂
     BaseFactory *googleFactory = [FactoryManager factoryWithBrand:KGoogle];
-    //创建商品
+    //基于工厂 创建相关商品
     Android *androidPhone = (Android *)[googleFactory createPhone];
 
     //商品通用事件
+    //通过对象访问内存中直接声明的事件/所遵循的协议中间接声明事件
     [androidPhone phoneCall];
     //定制主题(特定事件)
     [androidPhone customTheme];
@@ -33,7 +34,7 @@
 
     // 获取工厂
     BaseFactory *appleFactory = [FactoryManager factoryWithBrand:KApple];
-    // 创建商品
+    //工厂内 创建相关商品
     IPhone *applePhone = (IPhone *)[appleFactory createPhone];
 
     //商品通用事件
