@@ -16,14 +16,14 @@
 //    -[UIView setLevel:]: unrecognized selector sent to instance 0xa940即@selector(setLevel:) SEL缺失IMP执行体
 //    -[UIView level]: unrecognized selector sent to instance 0x0ca0即@selector(level) SEL缺失IMP执行体
 
-//手动自定义setter事件
+//手动自定义setter事件及IMP
 - (void)setLevel:(NSInteger)level {
     //IMP执行体
     self.tag = level;
 
 }
 
-//手动自定义getter事件
+//手动自定义getter事件及IMP
 - (NSInteger)level
 {
     return self.tag;
