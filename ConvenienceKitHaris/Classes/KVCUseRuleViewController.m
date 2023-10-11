@@ -5,8 +5,8 @@
 //  Foundation框架内NSKeyValueCoding.h文件内的函数
 //  是否允许使用KVC直接访问实例变量, 默认YES accessInstanceVariablesDirectly
 //  Created by haijunyan on 2023/10/11.
-//  描述属性 //键
-//  描述属性链 //键链
+//  描述属性 //键 //单级属性
+//  描述属性链 //键链 //多级属性
 //  键值编码KVC  关注点在于  读写 类中已定义属性 所映射的数据
 
 #import "KVCUseRuleViewController.h"
