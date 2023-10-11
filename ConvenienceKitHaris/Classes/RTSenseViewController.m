@@ -81,7 +81,23 @@ typedef struct objc_method *Method;
 //    -[UIView setLevel:]: unrecognized selector sent to instance 0xa940即@selector(setLevel:) SEL缺失IMP执行体
 //    -[UIView level]: unrecognized selector sent to instance 0x0ca0即@selector(level) SEL缺失IMP执行体
 
-    [[NSObject alloc] associatedObjectsMethod];
+
+    //分类结构中新增属性名name间接读写
+    NSObject *objt = [[NSObject alloc] init];
+    objt.name = @"庄佩云";
+    NSLog(@"objt.name=%@",objt.name);
+
+    //主(枝)表
+    NSArray *array = [NSArray array];
+    //指针键
+    static char overviewKey;
+//    char overviewKey1;
+//    static char overviewKey2;
+//    static char overviewKey3;
+    //主表 通过 指针键 关联 对象
+    //表 关联着 字符串
+    [[NSObject alloc] arrayAssociatedStr:[[NSString alloc] initWithFormat:@"%@",@"抱抱宝宝"] Array:array PKey:&overviewKey];
+    NSLog(@"----%@",[[NSObject alloc] strFromArray:array PKey:&overviewKey]);
 
 
 
