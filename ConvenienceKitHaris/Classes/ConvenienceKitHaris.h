@@ -13,6 +13,7 @@
 #import "UIView+Responder.h"
 #import "NSObject+Associated.h"
 #import "UIView+Associated.h"
+#import "FactoryManager.h"
 #import "Product.h"
 #import "ResponderChainViewController.h"
 #import "ThreadViewController.h"
