@@ -6,10 +6,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseFactory.h"
 
 @interface Product : NSObject
 @property (nonatomic, copy) NSString *name;    //商品名字
 @property (nonatomic, assign) float price;     //商品价格
-//@property (nonatomic, strong) Factory *factory; //生产工厂
+@property (nonatomic, strong) BaseFactory
+ *factory; //商品所属工厂
 
 @end
