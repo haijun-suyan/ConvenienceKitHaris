@@ -11,6 +11,7 @@
 
 
 @interface BaseFactory : NSObject
+@property(nonatomic,copy)NSString *address;//地址
 
 - (BaseGoods *)createPhone;
 

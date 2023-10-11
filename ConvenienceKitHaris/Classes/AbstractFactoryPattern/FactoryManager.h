@@ -1,7 +1,7 @@
 //  统一管控辅助类
 //  FactoryManager.h
 //  AbstractFactoryPattern
-//
+//  不同工厂间切换
 //  Created by haijunyan on 2020/3/2.
 //  Copyright © 2020年 haijunyan. All rights reserved.
 //
