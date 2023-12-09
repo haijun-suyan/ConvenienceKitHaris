@@ -23,5 +23,6 @@
 #import "LoseIMP.h"
 #import "NSObject+TimerDown.h"
 #import "NSString+Attributed.h"
+#import "CustomView.h"
 
 #endif /* ConvenienceKitHaris_h */
