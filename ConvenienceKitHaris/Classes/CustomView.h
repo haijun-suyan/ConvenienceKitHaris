@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CustomView : UIView
--(instancetype)initWithFrame:(CGRect)frame Handler:(void (^)(UIButton*))handle;
+-(instancetype)initWithFrame:(CGRect)frame Title:(NSString *)titleBtn Handler:(void (^)(UIButton*))handle;
 @end
 
 

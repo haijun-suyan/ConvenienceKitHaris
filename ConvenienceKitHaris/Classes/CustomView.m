@@ -11,12 +11,18 @@ typedef void(^BtnEventBlock)(UIButton*);
 @interface CustomView ()
 @property(nonatomic,strong)UIButton *btn;
 @property(nonatomic,copy)BtnEventBlock btnBlock;
+@property(nonatomic,copy)NSString *titleBtn;
 @end
 
 @implementation CustomView
--(instancetype)initWithFrame:(CGRect)frame Handler:(void (^)(UIButton*))handle{
+-(instancetype)initWithFrame:(CGRect)frame Title:(NSString *)titleBtn Handler:(void (^)(UIButton*))handle{
     self = [super initWithFrame:frame];
     if (self) {
+        if (titleBtn.length>0) {
+            self.titleBtn = titleBtn;
+        }else {
+            self.titleBtn = @"测试";
+        }
         [self neededEmbededView:frame];
         self.btnBlock = handle;
     }
@@ -32,8 +38,8 @@ typedef void(^BtnEventBlock)(UIButton*);
 {
     if (!_btn) {
         _btn = [[UIButton alloc]initWithFrame:CGRectZero];
-        [_btn setTitle:@"测试" forState:UIControlStateNormal];
-        [_btn setTitle:@"测试" forState:UIControlStateHighlighted];
+        [_btn setTitle:self.titleBtn forState:UIControlStateNormal];
+        [_btn setTitle:self.titleBtn forState:UIControlStateHighlighted];
         [_btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_btn setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
         [_btn.titleLabel setFont: [UIFont systemFontOfSize:16]];
