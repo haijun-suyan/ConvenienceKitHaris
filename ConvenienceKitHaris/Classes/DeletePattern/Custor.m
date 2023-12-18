@@ -1,14 +1,14 @@
 //
-//  Customer.m
+//  Custor.m
 //  DelegatePattern
 //
-//  Created by wupeng on 2017/3/3.
-//  Copyright © 2017年 wupeng. All rights reserved.
+//  Created by yanhaijun on 2018/3/3.
+//  Copyright © 2018年 yanhaijun. All rights reserved.
 //
 
-#import "Customer.h"
+#import "Custor.h"
 
-@implementation Customer
+@implementation Custor
 
 - (void)buyItemCount:(NSInteger)count {
     if (self.delegate && [self.delegate respondsToSelector:@selector(customer:buyItemCount:)]) {

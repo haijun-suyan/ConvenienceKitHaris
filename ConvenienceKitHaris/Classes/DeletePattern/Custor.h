@@ -1,13 +1,13 @@
 //
-//  Customer.h
+//  Custor.h
 //  DelegatePattern
 //
-//  Created by wupeng on 2017/3/3.
-//  Copyright © 2017年 wupeng. All rights reserved.
+//  Created by yanhaijun on 2018/3/3.
+//  Copyright © 2018年 yanhaijun. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-@class Customer;
+@class Custor;
 
 @protocol CustomerDelegate <NSObject>
 
@@ -18,7 +18,7 @@
 @end
 
 
-@interface Customer : NSObject
+@interface Custor : NSObject
 
 @property (nonatomic, weak) id <CustomerDelegate> delegate;
 
