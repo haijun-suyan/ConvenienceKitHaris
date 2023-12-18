@@ -13,7 +13,7 @@
 
 @required
 
-- (void)customer:(Customer *)customer buyItemCount:(NSInteger)count;
+- (void)customer:(Custor *)customer buyItemCount:(NSInteger)count;
 
 @end
 
