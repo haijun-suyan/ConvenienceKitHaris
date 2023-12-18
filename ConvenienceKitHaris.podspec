@@ -30,6 +30,8 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
+  s.static_framework = true
+
   s.source_files = 'ConvenienceKitHaris/Classes/**/*'
   
   # s.resource_bundles = {
@@ -39,4 +41,5 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'Masonry', '~> 1.1.0'
+  s.dependency 'PLCrashReporter', '~> 1.11.1'
 end

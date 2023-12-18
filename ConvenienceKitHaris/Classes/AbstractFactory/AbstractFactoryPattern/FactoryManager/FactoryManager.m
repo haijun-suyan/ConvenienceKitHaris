@@ -16,8 +16,6 @@
         factory = [[AppleFactory alloc] init];
     } else if (factoryType == KGoogle) {
         factory = [[GoogleFactory alloc] init];
-    }else {
-        factory = [[BaseFactory alloc] init];
     }
     return factory;
 
