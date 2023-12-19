@@ -3,7 +3,7 @@
 //  SRCBBank
 //
 //  Created by haijunyan on 2020/12/8.
-//  Copyright © 2020 李培辉. All rights reserved.
+//  Copyright © 2020 haijunyan. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

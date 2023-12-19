@@ -2,8 +2,8 @@
 //  StudentModel.m
 //  ProtoypePattern
 //
-//  Created by wupeng on 2017/2/26.
-//  Copyright © 2017年 wupeng. All rights reserved.
+//  Created by haijunyan on 2017/2/26.
+//  Copyright © 2017年 haijunyan. All rights reserved.
 //
 
 #import "StudentModel.h"
