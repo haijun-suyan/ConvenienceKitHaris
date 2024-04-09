@@ -20,6 +20,7 @@
 #import "ThreadViewController.h"
 #import "RTSenseViewController.h"
 #import "KVCUseRuleViewController.h"
+#import "LeakViewController.h"
 #import "LoseIMP.h"
 #import "NSObject+TimerDown.h"
 #import "NSString+Attributed.h"
