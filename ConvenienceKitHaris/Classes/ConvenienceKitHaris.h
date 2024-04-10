@@ -18,6 +18,7 @@
 #import "Product.h"
 #import "ResponderChainViewController.h"
 #import "ThreadViewController.h"
+#import "KVOViewController.h"
 #import "RTSenseViewController.h"
 #import "KVCUseRuleViewController.h"
 #import "LeakViewController.h"
