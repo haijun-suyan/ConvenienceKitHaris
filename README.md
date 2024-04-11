@@ -1,4 +1,26 @@
 # ConvenienceKitHaris
+# 适配模式之(多态)协议1对多
+# 抽象工厂模式
+# 观察者模式
+# 外观模式
+# 装饰模式之参考catagory
+# 策略模式
+# 桥接模式
+# 编辑模式
+# 命令模式
+# 代理模式
+# 线程保活
+# KVC
+# KVO
+# Leak内存泄漏
+# LRU
+# 监控(堆栈)
+# 观察者模式(订阅式通信)
+# 协议模式
+# 响应链
+# 运行时runtime
+# 项目通用配置
+
 
 [![CI Status](https://img.shields.io/travis/haijun-suyan/ConvenienceKitHaris.svg?style=flat)](https://travis-ci.org/haijun-suyan/ConvenienceKitHaris)
 [![Version](https://img.shields.io/cocoapods/v/ConvenienceKitHaris.svg?style=flat)](https://cocoapods.org/pods/ConvenienceKitHaris)
