@@ -62,5 +62,5 @@ fastlane/test_output
 
 iOSInjectionProject/
 
-!AbstractFactory/
-!TestTest/
+# !AbstractFactory/
+# !TestTest/
