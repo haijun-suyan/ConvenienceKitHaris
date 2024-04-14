@@ -33,7 +33,7 @@ TODO: Add long description of the pod here.
 
   s.static_framework = true
 
-  s.source_files = 'ConvenienceKitHaris/Classes/**'
+  s.source_files = 'ConvenienceKitHaris/Classes/**/*'
   
   # s.resource_bundles = {
   #   'ConvenienceKitHaris' => ['ConvenienceKitHaris/Assets/*.png']
