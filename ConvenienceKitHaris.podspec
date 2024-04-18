@@ -43,6 +43,6 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   s.dependency 'Masonry', '~> 1.1.0'
   s.dependency 'PLCrashReporter', '~> 1.11.1'
-  # s.dependency 'BaseKitHJY', '~> 0.1.0'
-  s.dependency 'BaseKitHJY', :path => '~/Desktop/CustomKit/BaseKitHJY'
+  s.dependency 'BaseKitHJY', '~> 0.1.0'
+  # s.dependency 'BaseKitHJY', :path => '~/Desktop/CustomKit/BaseKitHJY'
 end
