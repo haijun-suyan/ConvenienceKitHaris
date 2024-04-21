@@ -36,19 +36,20 @@
 		452DA5FD48931ECA56487918E8C0457F /* Pods-ConvenienceKitHaris_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ConvenienceKitHaris_Tests.modulemap"; sourceTree = "<group>"; };
 		4733148928F5CE89C159F7D184954D90 /* ConvenienceKitHaris.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ConvenienceKitHaris.xcconfig; sourceTree = "<group>"; };
 		4B630F8FB916FC331695798645CEBA49 /* Pods-ConvenienceKitHaris_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ConvenienceKitHaris_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		5F4229E5A410DBF654A00DA0F48DA0D1 /* Pods_ConvenienceKitHaris_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ConvenienceKitHaris_Tests.framework; path = "Pods-ConvenienceKitHaris_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F4229E5A410DBF654A00DA0F48DA0D1 /* Pods_ConvenienceKitHaris_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ConvenienceKitHaris_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		641E949D18BC0F989078686FFBF0A978 /* Pods-ConvenienceKitHaris_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ConvenienceKitHaris_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		69000B4BB04D09985654BB556707E53D /* Pods-ConvenienceKitHaris_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ConvenienceKitHaris_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		7060DA2A11EF310E134BA93D4AB6A44C /* ConvenienceKitHaris.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ConvenienceKitHaris.framework; path = ConvenienceKitHaris.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F7D6698DDB42D20636484E74C256648 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		B2C5D7FAEE1076512E214A63640D5868 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		D2707F167DE999AD158A9B7ADF0B6ADC /* ConvenienceKitHaris.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ConvenienceKitHaris.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7060DA2A11EF310E134BA93D4AB6A44C /* ConvenienceKitHaris.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ConvenienceKitHaris.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F7D6698DDB42D20636484E74C256648 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		B2C5D7FAEE1076512E214A63640D5868 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D2707F167DE999AD158A9B7ADF0B6ADC /* ConvenienceKitHaris.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = ConvenienceKitHaris.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D609267DD311E68D79325AA0A6744B0A /* Pods-ConvenienceKitHaris_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ConvenienceKitHaris_Tests-umbrella.h"; sourceTree = "<group>"; };
 		D8E23F7FCEFD09D280F88825F2AD015A /* ConvenienceKitHaris.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ConvenienceKitHaris.modulemap; sourceTree = "<group>"; };
 		DCB57C65E66EBE9CF630EB2CEA251407 /* ConvenienceKitHaris-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ConvenienceKitHaris-umbrella.h"; sourceTree = "<group>"; };
 		DD5CA636124FEB194A6A770B8E772143 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ReplaceMe.m; path = ConvenienceKitHaris/Classes/ReplaceMe.m; sourceTree = "<group>"; };
 		EA9B4BBC2E4C51B71C06EBDA9F3BF88C /* Pods-ConvenienceKitHaris_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ConvenienceKitHaris_Tests-Info.plist"; sourceTree = "<group>"; };
+		F39170042BD50BF000FD5282 /* SupportTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SupportTool.h; path = ../../../SupportKitHJY/SupportKitHJY/Classes/SupportTool.h; sourceTree = "<group>"; };
 		FB2C91A84E5760DADE984EC01CDA5C8A /* Pods-ConvenienceKitHaris_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ConvenienceKitHaris_Tests-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,6 +172,7 @@
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F39170042BD50BF000FD5282 /* SupportTool.h */,
 				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
 			name = Frameworks;
@@ -492,8 +494,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
