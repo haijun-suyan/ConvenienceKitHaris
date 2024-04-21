@@ -1,5 +1,5 @@
 //
-//  同级库库间：1.不支持.h文件引入#import <SupportKitHJY/SupportKitHJY.h> 2.(单纯的)前向声明@class SupportTool;(不支持引用直接IMP)
+//  同级库库间：1.不支持.h文件引入#import <SupportKitHJY/SupportKitHJY.h> 2.(单纯的)前向声明@class SupportTool;(不支持引用直接IMP/直接属性)
 //
 //  //此处协议属性delegate所指向的对象self是当前构造器
 //  //此处会形成‘双强向’(采用弱化‘weak’)
@@ -16,9 +16,12 @@
 #import <BaseKitHJY/BaseKitHJY.h>
 
 //前向声明
-//@class SupportTool;
+@class SupportTool;
+@class SupportViewController;
 @interface DataViewController ()
 @property(nonatomic,strong)id<UnitProtocol> delegate;
+
+@property(nonatomic,strong)UIButton *btn;
 @end
 
 @implementation DataViewController
@@ -26,6 +29,49 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor cyanColor];
+    [self.view addSubview:self.btn];
+    self.btn.frame = CGRectMake(50, 100, 200,50);
+
+    [self podDataMoveByDelegate];
+    //---------------------Block走不通------------------
+
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    [center postNotificationName:@"Notification_GetUserProfileSuccess" object:self userInfo:@{@"key":@"444"}];
+
+}
+
+-(UIButton *)btn {
+    if (!_btn) {
+        _btn = [[UIButton alloc]initWithFrame:CGRectZero];
+        [_btn setTitle:@"测试" forState:UIControlStateNormal];
+        [_btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [_btn.titleLabel setFont: [UIFont systemFontOfSize:16]];
+        _btn.layer.cornerRadius = 5.0;
+        _btn.layer.borderWidth = 1.0;
+        _btn.layer.masksToBounds = YES;
+        [_btn addTarget:self action:@selector(btnDidClick:) forControlEvents:(UIControlEventTouchUpInside)];
+    }
+    return _btn;
+}
+
+- (void)btnDidClick:(UIButton *)psender {
+    //----------------Notification--------------
+    //写法3：
+
+
+    
+    Class STClass = NSClassFromString(@"SupportViewController");
+    id STObject = [STClass new];
+    SupportViewController *customInstance = (SupportViewController *)STObject;
+    [self.navigationController pushViewController:customInstance animated:YES];
+
+
+
+
+}
+
+- (void)podDataMoveByDelegate {
+    //---------------------delegate-----------------------------
     //(STClass间接类)只支持访问协议的间接IMP
     //写法1：
     Class STClass = NSClassFromString(@"SupportTool");
@@ -47,10 +93,11 @@
         NSLog(@"打印=%@",valueRtn);
     }
 
-    //写法3：
-
-
 }
+
+
+
+
 
 
 
