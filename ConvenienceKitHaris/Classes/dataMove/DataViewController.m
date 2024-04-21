@@ -1,5 +1,5 @@
 //
-//  同级库库间：1.不支持.h文件引入#import <SupportKitHJY/SupportKitHJY.h> 2.前向声明@class SupportTool;(不支持引用直接IMP)
+//  同级库库间：1.不支持.h文件引入#import <SupportKitHJY/SupportKitHJY.h> 2.(单纯的)前向声明@class SupportTool;(不支持引用直接IMP)
 //
 //  //此处协议属性delegate所指向的对象self是当前构造器
 //  //此处会形成‘双强向’(采用弱化‘weak’)
