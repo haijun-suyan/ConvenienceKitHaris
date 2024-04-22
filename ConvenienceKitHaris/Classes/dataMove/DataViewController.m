@@ -14,7 +14,7 @@
 
 #import "DataViewController.h"
 #import <BaseKitHJY/BaseKitHJY.h>
-
+#import "FirstViewController.h"
 //前向声明
 @class SupportTool;
 @class SupportViewController;
@@ -35,15 +35,12 @@
     [self podDataMoveByDelegate];
     //---------------------Block走不通------------------
 
-    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-    [center postNotificationName:@"Notification_GetUserProfileSuccess" object:self userInfo:@{@"key":@"444"}];
-
 }
 
 -(UIButton *)btn {
     if (!_btn) {
         _btn = [[UIButton alloc]initWithFrame:CGRectZero];
-        [_btn setTitle:@"测试" forState:UIControlStateNormal];
+        [_btn setTitle:@"通知" forState:UIControlStateNormal];
         [_btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_btn.titleLabel setFont: [UIFont systemFontOfSize:16]];
         _btn.layer.cornerRadius = 5.0;
@@ -55,18 +52,19 @@
 }
 
 - (void)btnDidClick:(UIButton *)psender {
-    //----------------Notification--------------
-    //写法3：
-
-
-    
     Class STClass = NSClassFromString(@"SupportViewController");
     id STObject = [STClass new];
-    SupportViewController *customInstance = (SupportViewController *)STObject;
-    [self.navigationController pushViewController:customInstance animated:YES];
-
-
-
+    [self.navigationController pushViewController:STObject animated:YES];
+    //----------------Notification--------------
+    //写法3：
+    dispatch_async(dispatch_get_main_queue(), ^{
+        //单例center
+        NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+        if (center) {
+            //发送通知
+            [center postNotificationName:@"Notification_Success" object:nil userInfo:@{@"key":@"444"}];
+        }
+    });
 
 }
 
