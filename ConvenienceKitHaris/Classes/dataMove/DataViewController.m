@@ -33,7 +33,11 @@
     self.btn.frame = CGRectMake(50, 100, 200,50);
 
     [self podDataMoveByDelegate];
-    //---------------------Block走不通------------------
+    //---------Block走不通--------
+
+    //----------------单例--------------
+    //写法4：
+    [UnitObject shareInstance].name = @"海军颜";
 
 }
 
