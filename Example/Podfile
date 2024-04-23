@@ -1,3 +1,4 @@
+platform :ios, '11.0'
 use_frameworks!
 target 'ConvenienceKitHaris_Tests' do
   pod 'ConvenienceKitHaris', :path => '../'
